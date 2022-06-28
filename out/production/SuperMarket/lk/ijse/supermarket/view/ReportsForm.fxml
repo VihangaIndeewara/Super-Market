@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="DashBoardContext" prefHeight="632.0" prefWidth="1317.0" style="-fx-background-color: CDCDCD;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.supermarket.controller.ReportsFormController">
+   <children>
+      <Label layoutX="106.0" layoutY="24.0" prefHeight="53.0" prefWidth="143.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="53.0" fitWidth="55.0" layoutX="32.0" layoutY="23.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/report.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="922.0" layoutY="108.0" prefHeight="53.0" prefWidth="257.0" text="Most Movable Item" textFill="#5b5b5b">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="914.0" layoutY="360.0" prefHeight="53.0" prefWidth="272.0" text="Least Movable Item" textFill="#5b5b5b">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="80.0" layoutY="213.0" onAction="#btnDailyIncomeOnAction" prefHeight="62.0" prefWidth="216.0" style="-fx-background-color: #8bd0f6;" text="Daily Income">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="80.0" layoutY="325.0" onAction="#btnMonthlyIncomeOnAction" prefHeight="62.0" prefWidth="216.0" style="-fx-background-color: #f1f4b9;" text="Monthly Income">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="80.0" layoutY="439.0" onAction="#btnAnnuallyIncomeOnAction" prefHeight="62.0" prefWidth="216.0" style="-fx-background-color: #60A670;" text="Annually Income">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="lblMostMovableItem" alignment="CENTER" layoutX="865.0" layoutY="161.0" prefHeight="113.0" prefWidth="370.0" style="-fx-background-color: FFFFFF;" textFill="#150689">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblLeastMovableItem" alignment="CENTER" layoutX="865.0" layoutY="416.0" prefHeight="113.0" prefWidth="370.0" style="-fx-background-color: FFFFFF;" textFill="#150689">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+      <Separator layoutX="783.0" layoutY="77.0" orientation="VERTICAL" prefHeight="537.0" prefWidth="29.0" />
+      <Label fx:id="lblIncome" alignment="CENTER" layoutX="365.0" layoutY="203.0" prefHeight="304.0" prefWidth="370.0" style="-fx-background-color: FFFFFF;">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblIncomeStatus" layoutX="376.0" layoutY="218.0" prefHeight="33.0" prefWidth="226.0" text="Income" textFill="#2e266f">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="406.0" layoutY="548.0" onAction="#btnIncomeChartOnAction" prefHeight="44.0" prefWidth="289.0" style="-fx-background-color: #007BFF;" text="Income Chart">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

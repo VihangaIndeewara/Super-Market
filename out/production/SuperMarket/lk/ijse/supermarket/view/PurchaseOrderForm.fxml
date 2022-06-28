@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="632.0" prefWidth="1317.0" style="-fx-background-color: CDCDCD;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.supermarket.controller.PurchaseOrderFormController">
+   <children>
+      <Label layoutX="83.0" layoutY="17.0" prefHeight="41.0" prefWidth="209.0" text="Purchase Order">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Separator layoutX="15.0" layoutY="65.0" prefHeight="3.0" prefWidth="1282.0" />
+      <ImageView fitHeight="48.0" fitWidth="50.0" layoutX="22.0" layoutY="11.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/order.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblOrderId" layoutX="151.0" layoutY="91.0" prefHeight="41.0" prefWidth="94.0" text="OR001">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="99.0" prefHeight="26.0" prefWidth="74.0" text="Order ID :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtUnitDiscount" editable="false" labelFloat="true" layoutX="858.0" layoutY="215.0" prefHeight="31.0" prefWidth="94.0" promptText="Unit Discount" />
+      <JFXTextField fx:id="txtQty" labelFloat="true" layoutX="1004.0" layoutY="215.0" onKeyReleased="#txtKeyReleased" prefHeight="31.0" prefWidth="80.0" promptText="Qty" />
+      <JFXComboBox fx:id="cmbItemCode" labelFloat="true" layoutX="64.0" layoutY="215.0" prefHeight="31.0" prefWidth="109.0" promptText="Item Code" />
+      <JFXTextField fx:id="txtUnitPrice" editable="false" labelFloat="true" layoutX="723.0" layoutY="215.0" prefHeight="31.0" prefWidth="115.0" promptText="Unit Price" />
+      <JFXTextField fx:id="txtQtyOnHand" editable="false" labelFloat="true" layoutX="610.0" layoutY="215.0" prefHeight="31.0" prefWidth="94.0" promptText="QtyOnHand" />
+      <JFXComboBox fx:id="cmbCustomerId" labelFloat="true" layoutX="63.0" layoutY="152.0" prefHeight="31.0" prefWidth="127.0" promptText="Customer ID" />
+      <JFXButton buttonType="RAISED" layoutX="1119.0" layoutY="143.0" onAction="#btnAddNewCustomerOnAction" prefHeight="31.0" prefWidth="176.0" style="-fx-background-color: #007BFF;" text="Add New Customer" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnAddToCart" buttonType="RAISED" layoutX="1165.0" layoutY="215.0" onAction="#btnAddToCartOnAction" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: #6f8d90;" text="Add To Cart" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="976.0" layoutY="210.0" orientation="VERTICAL" prefHeight="41.0" prefWidth="0.0" />
+      <TableView fx:id="tblCart" layoutX="20.0" layoutY="288.0" prefHeight="325.0" prefWidth="1014.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="93.00003051757812" text="Item Code" />
+          <TableColumn fx:id="colDescription" prefWidth="243.0" text="Description" />
+            <TableColumn fx:id="colSize" prefWidth="84.0" text="Size" />
+            <TableColumn fx:id="colQty" prefWidth="72.0" text="Qty" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="102.0" text="Unit Price" />
+            <TableColumn fx:id="colAmount" prefWidth="113.0" text="Amount" />
+            <TableColumn fx:id="colDiscount" prefWidth="104.0" text="Discount" />
+            <TableColumn fx:id="colTotal" prefWidth="99.0" text="Total" />
+            <TableColumn fx:id="colRemove" prefWidth="78.0" text="---" />
+        </columns>
+      </TableView>
+      <Label layoutX="1118.0" layoutY="362.0" prefHeight="53.0" prefWidth="115.0" text="Total " textFill="#d71212">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="1095.0" layoutY="415.0" prefHeight="53.0" prefWidth="192.0" text="0.00" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnPlaceOrder" buttonType="RAISED" disable="true" layoutX="1056.0" layoutY="539.0" onAction="#btnPlaceOrderOnAction" prefHeight="53.0" prefWidth="241.0" style="-fx-background-color: #1F8235;" text="Place Order" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="18.0" layoutY="265.0" prefHeight="3.0" prefWidth="1282.0" />
+      <JFXTextField fx:id="txtDescription" editable="false" labelFloat="true" layoutX="198.0" layoutY="215.0" prefHeight="31.0" prefWidth="282.0" promptText="Description" />
+      <JFXTextField fx:id="txtCustomerTitle" editable="false" labelFloat="true" layoutX="522.0" layoutY="152.0" prefHeight="31.0" prefWidth="228.0" promptText="Customer Title" />
+      <JFXTextField fx:id="txtCustomerName" editable="false" labelFloat="true" layoutX="218.0" layoutY="152.0" prefHeight="31.0" prefWidth="275.0" promptText="Customer Name" />
+      <JFXTextField fx:id="txtPackSize" editable="false" labelFloat="true" layoutX="487.0" layoutY="215.0" prefHeight="31.0" prefWidth="103.0" promptText="Size" />
+   </children>
+</AnchorPane>

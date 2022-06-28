@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="LoginAnchorPane" prefHeight="638.0" prefWidth="1215.0" style="-fx-background-color: E9E9E9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.supermarket.controller.CashierLoginFormController">
+   <children>
+      <AnchorPane layoutX="676.0" layoutY="67.0" prefHeight="526.0" prefWidth="429.0" style="-fx-background-color: C4C6C7; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="29.0" layoutY="33.0" prefHeight="44.0" prefWidth="230.0" text="Cashier Login">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="606.0" fitWidth="580.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/logo.jpg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtUserName" labelFloat="true" layoutX="730.0" layoutY="240.0" prefHeight="31.0" prefWidth="312.0" promptText="UserName">
+         <font>
+            <Font size="17.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtPassword" labelFloat="true" layoutX="730.0" layoutY="313.0" prefHeight="31.0" prefWidth="312.0" promptText="Password">
+         <font>
+            <Font size="17.0" />
+         </font></JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="730.0" layoutY="457.0" onAction="#btnLoginOnAction" prefHeight="44.0" prefWidth="312.0" style="-fx-background-color: #8A8075; -fx-background-radius: 20;" text="Login">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="38.0" fitWidth="41.0" layoutX="1141.0" layoutY="29.0" onMouseClicked="#backOnMouseClicked" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/back.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,4 +1,4 @@
-# Super-Market
+# Super-Market 
 This Application is Stand Alone Application. This is POS System for super market to simplified their business process. The Project is implemented using Layered Architecture.
 <br>
 <br>
